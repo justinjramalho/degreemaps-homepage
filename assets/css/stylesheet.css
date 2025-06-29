@@ -1,0 +1,26 @@
+/* #DegreeMaps Custom Stylesheet */
+
+.custom-hr {
+    display: block;
+    width: 20%;
+    height: 2px;
+    border-color: rgba(191, 11, 11, 1) !important;
+    background-color: #bf0b0b !important;
+}
+
+.fontAwesome {
+    font-family: 'Helvetica', FontAwesome, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+}
+
+.footer-nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#typed {
+    display: inline;
+}

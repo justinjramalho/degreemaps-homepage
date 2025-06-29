@@ -4,7 +4,9 @@ This repository contains the source code for the static prototype of the [Degree
 
 👉 [**View project details on my portfolio**](https://www.justinjramalho.com/projects/developer/degreemaps-homepage)
 
+
 ---
+
 
 ## 🚀 Project Overview
 
@@ -18,8 +20,6 @@ This website was crafted using the following technologies:
 * **Frameworks & Libraries:** Bootstrap (v4 & v5), jQuery
 * **Version Control:** Git & GitHub
 * **Deployment:** FTP
-
-*(Note: The mention of Python 3 in the original description refers to the planned dynamic backend, which will be integrated in a future version.)*
 
 ## ✨ Key Features
 
