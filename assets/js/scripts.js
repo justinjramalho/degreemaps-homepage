@@ -20,36 +20,51 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // --- Facebook Messenger Chat Plugin ---
+    var chatbox = document.getElementById('fb-customer-chat');
+    if (chatbox) {
+        chatbox.setAttribute("page_id", "101760727860793");
+        chatbox.setAttribute("attribution", "biz_inbox");
+    }
 
-    // --- Animate Button on Click ---
-    // This function is called via onclick="animateButton(this)" in the HTML
-    // It adds a 'clicked' class for a CSS animation and removes it after 500ms.
-    // NOTE: This function needs to be attached to the window object to be accessible from the HTML onclick attribute.
+    window.fbAsyncInit = function() {
+        FB.init({
+            xfbml: true,
+            version: 'v15.0'
+        });
+    };
+
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+
+    // --- Global Functions (attached to window object) ---
+
+    // Animate Button on Click
+    // Called via onclick="animateButton(this)" in the HTML
     window.animateButton = function(button) {
-        // Add a "clicked" class to the button to animate it
         button.classList.add('clicked');
-    
-        // Remove the "clicked" class after a short delay
         setTimeout(function() {
             button.classList.remove('clicked');
         }, 500);
     }
 
-
-    // --- Email Input Placeholder Conditions ---
-    // Saves the original placeholder text, clears it on focus, and restores it on blur.
-    // NOTE: These functions need to be attached to the window object to be accessible from the HTML onfocus/onblur attributes.
+    // Email Input Placeholder Conditions
+    // Called via onfocus/onblur in the HTML
     window.clearPlaceholder = function(input) {
-        // Save the original placeholder value if it hasn't been saved yet
         if (!input.getAttribute('data-placeholder')) {
             input.setAttribute('data-placeholder', input.getAttribute('placeholder'));
         }
-        // Clear the placeholder value
         input.setAttribute('placeholder', '');
     }
 
     window.restorePlaceholder = function(input) {
-        // Restore the original placeholder value
         input.setAttribute('placeholder', input.getAttribute('data-placeholder'));
     }
 

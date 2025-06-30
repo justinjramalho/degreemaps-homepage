@@ -24,3 +24,20 @@
 #typed {
     display: inline;
 }
+
+/* Custom styles to make the mobile footer accordion seamless */
+.accordion-flush .accordion-item {
+    background-color: transparent;
+    border: 0;
+}
+
+.accordion-flush .accordion-button {
+    background-color: transparent;
+    box-shadow: none; /* Removes the blue glow on click */
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.accordion-flush .accordion-body {
+    padding: 0.5rem 0; /* Adds a little vertical space but no horizontal padding */
+}
