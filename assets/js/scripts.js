@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Called via onclick="animateButton(this)" in the HTML
     window.animateButton = function(button) {
         // Disable the button to prevent multiple submissions
-        button.disabled = true;
+        //button.disabled = true;
 
         // Add a "clicked" class to the button to animate it
         button.classList.add('clicked');
